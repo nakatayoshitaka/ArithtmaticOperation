@@ -1,0 +1,33 @@
+﻿@model ArithmeticCalculation.Models.Default
+@{
+    ViewBag.Title = null;
+}
+
+@using (Html.BeginForm())
+{
+    @*入力画面*@
+    <legend style="color:red">四則演算</legend>
+   
+    @Html.TextBoxFor(x => x.Value1)
+    <br />
+    <br />
+    @Html.TextBoxFor(x => x.Value2)
+    <br />
+    <br />
+
+    @*オペレーションボタン*@
+    <input type="submit" name="Operater" value="add" />
+    <input type="submit" name="Operater" value="sub" />
+    <input type="submit" name="Operater" value="mul" />
+    <input type="submit" name="Operater" value="div" />
+    <br /><br />
+
+    @*出力画面*@
+<legend style="color:blue">
+    Answer
+    <br />
+    @Html.ValueFor(x => x.Result)
+</legend>
+    
+}
+
